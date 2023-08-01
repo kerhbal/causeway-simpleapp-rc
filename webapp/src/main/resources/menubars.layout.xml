@@ -13,6 +13,7 @@
                 <mb3:serviceAction objectType="simple.SimpleObjects" id="findByNameLike"/>
                 <mb3:serviceAction objectType="simple.SimpleObjects" id="listAll"/>
                 <mb3:serviceAction objectType="simple.SimpleObjects" id="listAllDto"/>
+                <mb3:serviceAction objectType="simple.SimpleObjects" id="findByMultipleFilters"/>
             </mb3:section>
         </mb3:menu>
         <mb3:menu unreferencedActions="true">

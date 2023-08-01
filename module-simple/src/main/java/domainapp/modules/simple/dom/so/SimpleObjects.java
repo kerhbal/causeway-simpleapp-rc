@@ -23,6 +23,8 @@ import lombok.RequiredArgsConstructor;
 import domainapp.modules.simple.SimpleModule;
 import domainapp.modules.simple.types.Name;
 
+import org.springframework.lang.Nullable;
+
 @Named(SimpleModule.NAMESPACE + ".SimpleObjects")
 @DomainService(nature = NatureOfService.VIEW)
 @Priority(PriorityPrecedence.EARLY)
@@ -76,6 +78,11 @@ public class SimpleObjects {
     public SimpleObjectViewModel listAllDto(
 
     ) {
+        return new SimpleObjectViewModel();
+    }
+
+    @Action(semantics = SemanticsOf.SAFE)
+    public SimpleObjectViewModel findByMultipleFilters(@Nullable String filter1, @Nullable String filter2, @Nullable String filter3, @Nullable String filter4) {
         return new SimpleObjectViewModel();
     }
 

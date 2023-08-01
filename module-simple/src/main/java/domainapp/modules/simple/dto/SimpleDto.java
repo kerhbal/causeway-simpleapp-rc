@@ -26,15 +26,19 @@ import java.util.stream.Collectors;
 @XmlType(
         propOrder = {
                 "id",
-                "name"
+                "name",
+                "field1",
+                "field2",
+                "field3"
         }
 )
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-@Getter @Setter
 public class SimpleDto {
+    @Getter @Setter
     private Long id;
 
     @Title
+    @Getter @Setter
     private String name;
 
     @Autowired
