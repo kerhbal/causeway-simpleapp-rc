@@ -98,5 +98,30 @@
                 </repository>
             </repositories>
         </profile>
+        <profile>
+            <id>causeway-nightly-snapshots</id>
+            <activation>
+                <property>
+                    <name>!skip.causeway-nightly-snapshots</name>
+                </property>
+            </activation>
+            <repositories>
+                <repository>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                        <checksumPolicy>fail</checksumPolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                        <checksumPolicy>fail</checksumPolicy>
+                    </snapshots>
+                    <id>causeway-nightly-snapshots</id>
+                    <name>Causeway Nightly Snapshots (maven)</name>
+                    <url>https://raw.githubusercontent.com/apache-causeway-committers/causeway-nightly/master/mvn-snapshots</url>
+                </repository>
+            </repositories>
+        </profile>
     </profiles>
 </project>
