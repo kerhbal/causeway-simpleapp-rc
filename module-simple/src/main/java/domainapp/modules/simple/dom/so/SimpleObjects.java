@@ -82,8 +82,15 @@ public class SimpleObjects {
     }
 
     @Action(semantics = SemanticsOf.SAFE)
-    public SimpleObjectViewModel findByMultipleFilters(@Nullable String filter1, @Nullable String filter2, @Nullable String filter3, @Nullable String filter4) {
+    public SimpleObjectViewModel findByMultipleFilters(@Nullable String filter1, @Nullable Long filter2, @Nullable Integer filter3, @Nullable Boolean filter4) {
         return new SimpleObjectViewModel();
+    }
+
+    public String validateFindByMultipleFilters(String filter1, Long filter2, Integer filter3, Boolean filter4) {
+        if (filter1 == null && filter2 == null) {
+            return "Invalid!";
+        }
+        return "";
     }
 
 
